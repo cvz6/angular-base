@@ -10,24 +10,16 @@ angular-base 是一个以 Angular 4.0 为基础的，帮助企业
 
 # 前端设计规范
 
-### 微小·确定·幸福
+### 微小 · 确定 · 幸福
 
-基于阿里的ANT DESIGN [详情看这里](https://ant.design/docs/spec/introduce-cn)
+基于阿里的 [ANT DESIGN](https://ant.design/docs/spec/introduce-cn)
 
-- 导航 https://ant.design/docs/pattern/navigation-cn
+- [导航](https://ant.design/docs/pattern/navigation-cn) / [表单](https://ant.design/docs/pattern/form-cn) / [列表](https://ant.design/docs/pattern/list-cn)
+- [表格](https://ant.design/docs/pattern/table-cn) / [表格: 复杂数据](https://ant.design/docs/pattern/complex-table-cn)
+- [高级搜索](https://ant.design/docs/pattern/advanced-search-cn)
 
-- 表单 https://ant.design/docs/pattern/form-cn
+> 更多：[设计](http://library.ant.design/), [资源](https://ant.design/docs/resource/download-cn)
 
-- 列表 https://ant.design/docs/pattern/list-cn
-
-- 表格 https://ant.design/docs/pattern/table-cn
-
-- 表格: 复杂数据 https://ant.design/docs/pattern/complex-table-cn
-
-- 高级搜索 https://ant.design/docs/pattern/advanced-search-cn
- 
- 下载设计组件库 http://library.ant.design/
- 资源下载 https://ant.design/docs/resource/download-cn
 
 # 使用前需要知道的知识
 
@@ -38,8 +30,6 @@ angular-base 是一个以 Angular 4.0 为基础的，帮助企业
 - 该项目是帮助企业快速开发使用的种子项目，不适合新手学习，建议新手先学习基础知识。
 
 [学习angular系列教材整理](src/assets/doc/studay.md)
-
-
 
 
 # 集成的开源插件
@@ -60,34 +50,39 @@ angular-base 是一个以 Angular 4.0 为基础的，帮助企业
 
 # 快速启动
 - 使用前准备工作
-使用前，安装 angular-cli `npm install -g @angular/cli@latest`
-[参考链接](https://github.com/angular/angular-cli)
-> 如果网络受限，请尝试[淘宝的镜像](https://github.com/cnpm/cnpm)
-> `npm i -g cnpm --registry=https://registry.npm.taobao.org`
-
-- 下载该项目然后 `npm i`
-- `ng serve` 后打开浏览器 `localhost:4200` 即可
-
-如果出现错误你可以参考这里 [angular 开发常见错误](src/assets/doc/error.md)src/assets/doc/error.md
-### 注意
-不清楚 NG 指令，可以 `ng help`
-
-比如修改启动端口号，`ng serve -p 4300` 即可
-
-编译发布 `ng build -prod  -base-href ./` 即可
-
-
-- 开发调试
+1. 安装全局的 [angular-cli](https://github.com/angular/angular-cli)：
+```bash
+$ npm i @angular/cli@latest -g
 ```
-一键启动调试
-$ ng serve --port 0 --open
-如果需要实时调试 AoT 效果，请使用以下命令启动
-$ ng serve --port 0 --open --aot
+> 国内用户可以尝试:
+> `npm config set registry https://registry.npm.taobao.org --global`
+> `npm config set disturl https://npm.taobao.org/dist --global`
+
+
+2. 安装项目依赖与启动:
+```bash
+$ npm i && ng server
 ```
--  构建和部署
+> 错误请参考 [angular 开发常见错误](src/assets/doc/error.md)src/assets/doc/error.md)
+
+## 注意
+- 帮助: `ng help`
+- 改启动端口号: `ng serve -p 4300`
+- 发布: `ng build -prod  -base-href ./`
+- 开发调试:
+
+```bash
+  ## 一键启动调试
+  $ ng serve --port 0 --open
+  ## 如果需要实时调试 AoT 效果，请使用以下命令启动
+  $ ng serve --port 0 --open --aot
+```
+
+- 构建和部署
+
 ```
 $ ng build --prod
-入口文件会构建到 `dist` 目录中，你可以自由部署到不同环境中进行引用。
+## 入口文件会构建到 `dist` 目录中，你可以自由部署到不同环境中进行引用。
 ```
 
 # 浏览器兼容性

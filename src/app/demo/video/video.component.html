@@ -1,0 +1,71 @@
+<h1>ckplayer播放视频</h1>
+<nz-card>
+  <ng-template #title>
+    <h5>播放m3u8格式视频</h5>
+  </ng-template>
+  <ng-template #body>
+    <div id="a1"></div>
+  </ng-template>
+</nz-card>
+<nz-card>
+  <ng-template #title>
+    <h5>播放mp4格式视频</h5>
+  </ng-template>
+  <ng-template #body>
+    <div id="a2"></div>
+  </ng-template>
+</nz-card>
+<nz-card>
+  <ng-template #title>
+    <h5>rtmp视频播放</h5>
+  </ng-template>
+  <ng-template #body>
+    <div id="a3"></div>
+  </ng-template>
+</nz-card>
+<div style="margin: 50px;text-align: center">
+  <a href="http://www.ckplayer.com/article/19.htm">ckplayer官网更多示例</a><br>
+  <a href="http://www.ckplayer.com/manual/">ckplayer官网手册</a>
+</div>
+<h1>videojs播放视频</h1>
+<!--
+需要打开index.html中videojs的引用
+如下：
+<link href="//vjs.zencdn.net/5.19/video-js.min.css" rel="stylesheet">
+  <script src="//vjs.zencdn.net/5.19/video.min.js"></script>
+  <script src="//unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+  <script>
+    //flash路径，有一些html播放不了的视频，就需要用到flash播放。这一句话要加在在videojs.js引入之后使用
+    videojs.options.flash.swf = "//cdn.bootcss.com/videojs-swf/5.4.1/video-js.swf";
+  </script>
+-->
+<nz-card>
+  <ng-template #title>
+    <h5>播放m3u8格式视频</h5>
+  </ng-template>
+  <ng-template #body>
+    <video id="example-video" width="1000" height="600" class="video-js vjs-default-skin vjs-big-play-centered"
+           poster="">
+      <source src="http://119.60.8.230:10088/EasyTrans/Data/cc153d43-17d5-4de7-8ec3-318ed65724f6/video.m3u8"
+              type="application/x-mpegURL">
+    </video>
+  </ng-template>
+</nz-card>
+<nz-card>
+  <ng-template #title>
+    <h5>音频播放</h5>
+  </ng-template>
+  <ng-template #body>
+    <audio id="audio1" width="600" height="300" class="video-js  vjs-big-play-centered" style="position: relative">
+      <source src="http://119.60.8.230:10088/EasyTrans/Data/c559d681-6929-4da8-a0c2-1e9b375af27c/video.m3u8"
+              type="application/x-mpegURL">
+    </audio>
+  </ng-template>
+</nz-card>
+<div style="margin: 50px;text-align: center">
+  <a href="http://videojs.com/getting-started/">videojs官网</a><br>
+  <a href="http://docs.videojs.com/">videojs手册</a><br>
+</div>
+
+
+

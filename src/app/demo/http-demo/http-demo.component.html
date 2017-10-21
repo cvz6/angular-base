@@ -1,0 +1,52 @@
+<div>
+  <nz-card style="width:300px;margin-right: 20px; float: left">
+    <ng-template #title>
+      get请求示例
+    </ng-template>
+    <ng-template #body>
+     {{getData|json}}
+    </ng-template>
+  </nz-card>
+
+  <nz-card style="width:300px;margin-right: 20px; float: left">
+    <ng-template #title>
+      get请求失败是自动重试示例
+    </ng-template>
+    <ng-template #body>
+      {{getRetryData|json}}
+    </ng-template>
+  </nz-card>
+
+  <nz-card style="width:300px;margin-right: 20px; float: left">
+    <ng-template #title>
+      post请求示例
+    </ng-template>
+    <ng-template #body>
+      {{postData|json}}
+    </ng-template>
+  </nz-card>
+
+  <nz-card style="width:300px;margin-right: 20px; float: left">
+    <ng-template #title>
+      post请求失败是自动重试示例
+    </ng-template>
+    <ng-template #body>
+      {{getRetryData|json}}
+    </ng-template>
+  </nz-card>
+  <div style="clear: both"></div>
+
+
+  <div style="margin:50px auto;width: 50%;border:red solid 2px;min-height: 100px;">
+    <h2>这里是httpService的Demo演示</h2>
+    <!--&lt;!&ndash;这里使用“管道” 将对象转化成json输出&ndash;&gt;-->
+    <p style="margin: 20px;">{{uploadData | json}}</p>
+
+    <div style="margin: 20px;">
+      <h4> 多文件上传示例:</h4>
+      <!-- &lt;!&ndash;input:类型为文件 multiple:支持多文件上传 change:文件选择时触发事件&ndash;&gt;
+       &lt;!&ndash;uploadFele()：自定义上传文件方法 accept:限定上传的文件类型&ndash;&gt;input-->
+      <input type="file" multiple (change)="uploadFile($event)" accept="image/*"/>
+    </div>
+  </div>
+</div>

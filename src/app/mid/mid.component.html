@@ -1,0 +1,29 @@
+<!--列表使用bootStarp，文档：http://v3.bootcss.com/getting-started/-->
+<ul class="list-group">
+  <li class="list-group-item list-group-item-warning">
+    <!--卡片使用阿里组件，文档：https://ng.ant.design/#/components/card-->
+    <nz-card style="width:600px;">
+      <ng-template #title>
+        <a routerLink="/index"><h5>angular快速启动项目</h5></a>
+      </ng-template>
+      <ng-template #extra>
+        <a routerLink="/demo">更多</a>
+      </ng-template>
+      <ng-template #body>
+        <h5>理想： 在这个前端混乱的时代，做项目最好是兼容各种技术，各种浏览器，组件化开发，模块化开发，快速开发，还要方便自动化测试。</h5><br>
+        <p>1. 集成jQuary，项目中可以写jQuary代码也可以写angular代码。</p><br>
+        <p>2. 支持TypeScript，项目中可以写TypeScript也可以写JavaScript代码。</p><br>
+        <p>3. 支持SCSS，项目中可以写CSS样式也可以写SCSS代码。</p><br>
+        <p>4. 集成阿里开源组件库，项目中可以使用bootStarp布局样式，也可以使用nz-zrror布局样式，
+          你可以增加其他开源组件库，说明文档中有个集成“饿了么”团队开源库的示例。</p><br>
+        <a routerLink="/demo">更多请查看emo示例</a>
+      </ng-template>
+    </nz-card>
+  </li>
+  <li class="list-group-item list-group-item-warning">
+    <button nz-button [nzType]="'primary'"><a routerLink="/demo">示例Demo</a></button>
+  </li>
+  <li class="list-group-item list-group-item-warning">
+    <button nz-button>说明文档请看这里assets/doc文件夹,文档目录维护在assets/doc/index.md</button>
+  </li>
+</ul>

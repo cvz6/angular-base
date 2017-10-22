@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {AppSettings} from './app-settings';
 import 'rxjs/add/operator/do';
@@ -12,7 +12,7 @@ import 'rxjs/add/operator/do';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  //如果需要注入service，使用这种方式，打开注释代码即可
+  // 如果需要注入service，使用这种方式，打开注释代码即可
   // private httpService: HttpService;
   //
   // constructor(private injector: Injector) {
@@ -21,11 +21,11 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // const started = Date.now();
     // this.httpService = this.injector.get(HttpService); // get HttpService  within intercept
-    //HttpRequest和HttpResponse是不可变的，更改的时候只能clone
+    // HttpRequest和HttpResponse是不可变的，更改的时候只能clone
     const authReq = request.clone({headers: request.headers.set('token', AppSettings.TOKEN)});
-    let urlArray: string [] = authReq.url.split('?');
+    const urlArray: string [] = authReq.url.split('?');
     // console.log('转换前的统一资源定位器 ', urlArray[1]);
-    if (urlArray!=null&&urlArray.length >= 2) {
+    if (urlArray != null && urlArray.length >= 2) {
       let url: string = urlArray[1];
       url = this.replaceAll(url, '{', '%7B');
       url = this.replaceAll(url, '}', '%7D');

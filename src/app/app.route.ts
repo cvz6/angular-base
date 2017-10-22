@@ -1,4 +1,4 @@
-import {MidComponent} from "./mid/mid.component";
+import {MidComponent} from './mid/mid.component';
 
 export const appRoutes = [
   {

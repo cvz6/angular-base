@@ -14,7 +14,7 @@ export class HttpService implements HttpServiceInterface {
 
   private rootUrl: string = ROOT_URL;
 
-  //注入httpClient
+  // 注入httpClient
   constructor(private httpClient: HttpClient) {
   }
 
@@ -28,7 +28,7 @@ export class HttpService implements HttpServiceInterface {
       console.log(JSON.stringify(obj));
       for (let i = 0; i < obj.length; i++) {
         console.log(JSON.stringify(obj[i]));
-        //这里拼接对象
+        // 这里拼接对象
         // formData.append("obj", obj[i].value);
       }
     }
@@ -81,7 +81,7 @@ export class HttpService implements HttpServiceInterface {
    */
   getRetry(url: string, data: (data: any) => void, error: (error: any) => void, retry: number): void {
     if (!retry) {
-      retry = 3; //默认值为3
+      retry = 3; // 默认值为3
     }
     this.httpClient.get(this.rootUrl + url).retry(retry).subscribe(data, error);
   }

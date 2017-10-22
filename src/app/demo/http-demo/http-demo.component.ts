@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpService} from "../../http-service.service";
-import {appApis} from "../../apis";
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+import {HttpService} from '../../http-service.service';
+import {appApis} from '../../apis';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-http-demo',
@@ -10,30 +10,30 @@ import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 })
 export class HttpDemoComponent implements OnInit {
 
-  //接收http请求的数据
+  // 接收http请求的数据
   getData: any = [];
   getRetryData: any = [];
   postData: any = [];
   postRetryData: any = [];
   uploadData: any = [];
 
-  //构造函数 注入httpService
+  // 构造函数 注入httpService
   constructor(private httpService: HttpService, private httpClient: HttpClient) {
   }
 
-  //生命周期狗子：组件初始化时调用该方法
+  // 生命周期狗子：组件初始化时调用该方法
   ngOnInit() {
-
-    this.getTest();//get请求
-    this.getRetryTest();//get请求，失败自动重新请求示例
-
-    this.postTest();//post请求
-    this.postRetryTest();//post请求，失败自动重新请求示例
+    // 没有后台接口，暂时注释掉
+    // this.getTest(); // get请求
+    // this.getRetryTest(); // get请求，失败自动重新请求示例
+    //
+    // this.postTest(); // post请求
+    // this.postRetryTest(); // post请求，失败自动重新请求示例
   }
 
-  //get请求示例
+  // get请求示例
   getTest() {
-    let param = {
+    const param = {
       'pagesize': 3,
       'pagenum': 1,
       'type': 4000,
@@ -41,7 +41,7 @@ export class HttpDemoComponent implements OnInit {
         'recommend': 1
       }
     };
-    this.httpService.get(appApis.get_app_data.url + '?getPageStr=' + JSON.stringify(param),
+    this.httpService.get(appApis.get_app_data + '?getPageStr=' + JSON.stringify(param),
       data => {
         if (data) {
           this.getData = data.data;
@@ -56,7 +56,7 @@ export class HttpDemoComponent implements OnInit {
    * get请求，失败自动重试
    */
   getRetryTest() {
-    let param = {
+    const param = {
       'pagesize': 3,
       'pagenum': 1,
       'type': 4000,
@@ -64,20 +64,20 @@ export class HttpDemoComponent implements OnInit {
         'recommend': 1
       }
     };
-    this.httpService.getRetry(appApis.get_app_data.url + '?getPageStr=' + JSON.stringify(param),
+    this.httpService.getRetry(appApis.get_app_data + '?getPageStr=' + JSON.stringify(param),
       data => {
         this.getRetryData = data;
       },
       error => {
-        console.log(error)
+        console.log(error);
       },
       3
     );
   }
 
-  //post请求实例
+  // post请求实例
   postTest() {
-    let param = {
+    const param = {
       'type': '0009',
       'operate': 'A',
       'data': {
@@ -85,7 +85,7 @@ export class HttpDemoComponent implements OnInit {
         'type': '2'
       }
     };
-    this.httpService.post(appApis.get_app_data.url + '?postStr=' + JSON.stringify(param),
+    this.httpService.post(appApis.get_app_data + '?postStr=' + JSON.stringify(param),
       data => {
         if (data) {
           this.postData = data;
@@ -99,9 +99,9 @@ export class HttpDemoComponent implements OnInit {
   }
 
 
-  //post请求，失败自动重试
+  // post请求，失败自动重试
   postRetryTest() {
-    let param = {
+    const param = {
       'type': '0009',
       'operate': 'A',
       'data': {
@@ -109,19 +109,19 @@ export class HttpDemoComponent implements OnInit {
         'type': '2'
       }
     };
-    this.httpService.postRetry(appApis.get_app_data.url + '?postStr=' + JSON.stringify(param),
+    this.httpService.postRetry(appApis.get_app_data + '?postStr=' + JSON.stringify(param),
       {id: 2},
       data => {
         this.postRetryData = data;
       },
       error => {
-        console.log(error)
-      }, 3)
+        console.log(error);
+      }, 3);
   }
 
-  //文件上传
+  // 文件上传
   uploadFile($event): void {
-    this.httpService.upload(appApis.upload_app_file.url,
+    this.httpService.upload(appApis.upload_app_file,
       $event,
       data => {
         this.uploadData = data;
@@ -129,8 +129,8 @@ export class HttpDemoComponent implements OnInit {
       error => {
         console.log(error);
       },
-      "files",
-      {obj:"这个是普通的表单文件"})
+      'files',
+      {obj: '这个是普通的表单文件'});
   }
 
 }

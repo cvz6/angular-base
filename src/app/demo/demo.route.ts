@@ -1,9 +1,9 @@
-import {IndexComponent} from "./index/index.component";
+import {IndexComponent} from './index/index.component';
 import {HttpDemoComponent} from './http-demo/http-demo.component';
-import {VideoComponent} from "./video/video.component";
-import {JquaryComponent} from "./jquary/jquary.component";
+import {VideoComponent} from './video/video.component';
+import {JquaryComponent} from './jquary/jquary.component';
 
-export const demoRoutes=[
+export const demoRoutes = [
   {
     path: 'index',
     component: IndexComponent
@@ -20,7 +20,8 @@ export const demoRoutes=[
     path: 'httpDemo',
     component: HttpDemoComponent
   },
-  { path: '',
+  {
+    path: '',
     redirectTo: 'index',
     pathMatch: 'full'
   },

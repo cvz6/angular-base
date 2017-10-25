@@ -2,12 +2,12 @@
 
 市面上可用的 Angular开源免费好用的组件库：
 
-[PrimeNG](https://www.primefaces.org/primeng/) ：这款组件库做得比较早，代码质量比较高。
-[NG-Zorro](https://github.com/NG-ZORRO/ng-zorro-antd)：来自阿里云团队，外观是 AntDesign 风格。
-[Element-Angular](https://element-angular.faas.ele.me/?pathname=/guide/install)：作者来自饿了么团队。
-[Clarity](https://vmware.github.io/clarity/)：来自Vmware团队。
-[Angular-Material](https://github.com/angular/material2)：Angular 官方提供的组件库。目前（2017-10）一共规划了38个组件，Material Design 风格，代码质量比较高。
-[Ionic](http://ionicframework.com/)：专门为移动端打造的组件库，自带周边工具，生态很完善
+- [PrimeNG](https://www.primefaces.org/primeng/) ：这款组件库做得比较早，代码质量比较高。
+- [NG-Zorro](https://github.com/NG-ZORRO/ng-zorro-antd)：来自阿里云团队，外观是 AntDesign 风格。
+- [Element-Angular](https://element-angular.faas.ele.me/?pathname=/guide/install)：作者来自饿了么团队。
+- [Clarity](https://vmware.github.io/clarity/)：来自Vmware团队。
+- [Angular-Material](https://github.com/angular/material2)：Angular 官方提供的组件库。目前（2017-10）一共规划了38个组件，Material Design 风格，代码质量比较高。
+- [Ionic](http://ionicframework.com/)：专门为移动端打造的组件库，自带周边工具，生态很完善
 
 增加方法看每个网站的快速启动就可以了。
 

@@ -7,6 +7,7 @@ import {demoRoutes} from './demo.route';
 import {VideoComponent} from './video/video.component';
 import {HttpDemoComponent} from './http-demo/http-demo.component';
 import {JquaryComponent} from './jquary/jquary.component';
+import { NgZorroComponent } from './ng-zorro/ng-zorro.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {JquaryComponent} from './jquary/jquary.component';
     JquaryComponent,
     HttpDemoComponent,
     VideoComponent,
+    NgZorroComponent,
   ]
 })
 export class DemoModule { }

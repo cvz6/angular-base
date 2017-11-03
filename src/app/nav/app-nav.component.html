@@ -2,7 +2,14 @@
 <ul nz-menu [nzMode]="'horizontal'" [nzTheme]="'dark'">
   <li nz-menu-item><a routerLink="/index"><i class="anticon anticon-home"></i> 首页</a></li>
   <li nz-menu-item><a routerLink="/demo"><i class="anticon anticon-appstore-o"></i> 示例Demo</a></li>
-  <li nz-menu-item><a routerLink="/demo/nz"><i class="anticon anticon-appstore-o"></i> 阿里nz-zorro手册</a></li>
+  <li nz-submenu>
+    <span title>阿里开源组件库nz-zorro文档</span>
+    <ul>
+      <li nz-menu-group><a title routerLink="/nz-zorro">官网文档</a></li>
+      <li nz-menu-group><a title routerLink="/nz-zorro-temp">官网文档不能访问时，临时地址</a></li>
+    </ul>
+  </li>
+  <li nz-menu-item><a routerLink="/element">饿了么element文档</a></li>
   <li nz-submenu>
     <span title><i class="anticon anticon-github"></i>开源地址</span>
     <ul>
@@ -10,5 +17,5 @@
       <li nz-menu-group><a title href="https://github.com/liepeng328/angular-base" target="_blank">github</a></li>
     </ul>
   </li>
-  <li nz-menu-item><a href="https://jq.qq.com/?_wv=1027&k=50KMIsW" target="_blank"><i class="anticon anticon-mail"></i>联系我们</a></li>
+  <li nz-menu-item><a href="https://jq.qq.com/?_wv=1027&k=50KMIsW" target="_blank"><i class="anticon anticon-mail"></i>加入QQ群一起讨论</a></li>
 </ul>

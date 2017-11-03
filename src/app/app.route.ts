@@ -1,6 +1,10 @@
 import {MidComponent} from './mid/mid.component';
+import {Routes} from '@angular/router';
+import {NzZorroComponent} from './nz-zorro/nz-zorro.component';
+import {NzZorroTempComponent} from './nz-zorro-temp/nz-zorro-temp.component';
+import {ElementComponent} from './element/element.component';
 
-export const appRoutes = [
+export const appRoutes: Routes = [
   {
     path: 'index',
     component: MidComponent,
@@ -8,6 +12,18 @@ export const appRoutes = [
   {
     path: 'demo',
     loadChildren: 'app/demo/demo.module#DemoModule',
+  },
+  {
+    path: 'nz-zorro',
+    component: NzZorroComponent,
+  },
+  {
+    path: 'nz-zorro-temp',
+    component: NzZorroTempComponent,
+  },
+  {
+    path: 'element',
+    component: ElementComponent,
   },
 
   /*

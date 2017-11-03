@@ -12,13 +12,19 @@ import {StoreDataService} from './store-data.service';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.route';
 import {AppNavComponent} from './nav/app-nav.component';
-import { MidComponent } from './mid/mid.component';
+import {MidComponent} from './mid/mid.component';
+import {NzZorroComponent} from './nz-zorro/nz-zorro.component';
+import { NzZorroTempComponent } from './nz-zorro-temp/nz-zorro-temp.component';
+import { ElementComponent } from './element/element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavComponent,
     MidComponent,
+    NzZorroComponent,
+    NzZorroTempComponent,
+    ElementComponent,
   ],
   imports: [
     BrowserModule,

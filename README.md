@@ -2,6 +2,12 @@
 angular-base是一个以angular4.0为基础的，帮助企业
 快速开发的种子项目，开箱即用，检出即用。
 
+项目地址：
+
+开源中国： https://gitee.com/lovepeng/angluar-base
+
+github：  https://github.com/liepeng328/angular-base
+
 # 设计思想
 **君子性非异也，善假于物也。**
 

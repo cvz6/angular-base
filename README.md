@@ -1,6 +1,8 @@
 # 项目简介
 angular-base是一个以angular4.0为基础的，帮助企业
-快速开发的种子项目，开箱即用，检出即用。
+快速开发的种子项目。
+> 该项目是帮助企业快速开发使用的种子项目，如果你是新手，上手该项目可能不是一个很好的选择。
+
 
 项目地址：
 
@@ -34,17 +36,6 @@ github：  https://github.com/liepeng328/angular-base
  下载设计组件库 http://library.ant.design/
  资源下载 https://ant.design/docs/resource/download-cn
 
-# 使用前需要知道的知识
-
-- 简单的html，css，js的前端开发经验
-- 面向对象的编程思想，当然你是后台java或c#开发者最好
-- [angular4.0以上版本](https://angular.cn/)
-- [TypeScript](https://www.tslang.cn/)
-- 该项目是帮助企业快速开发使用的种子项目，如果你是新手，上手该项目可能不是一个很好的选择。
-
-[学习angular系列教材整理](src/assets/doc/studay.md)
-
-
 
 
 # 集成的开源插件
@@ -66,7 +57,7 @@ github：  https://github.com/liepeng328/angular-base
 # 开发环境
 - nodejs 8.4.0
 - npm 5.3.0
-- angular/cli: 1.3.2
+- angular/cli: 1.5
 - TypeScript 2.4.2
 
 
@@ -78,7 +69,7 @@ github：  https://github.com/liepeng328/angular-base
 > `npm i -g cnpm --registry=https://registry.npm.taobao.org`
 
 - 下载该项目然后`npm install`
-- `ng serve`后打开浏览器 `localhost:4200`即可
+- `ng serve`后打开浏览器 `localhost:4000`即可
 
 如果出现错误你可以参考这里[angular开发常见错误](src/assets/doc/error.md)src/assets/doc/error.md
 ### 注意

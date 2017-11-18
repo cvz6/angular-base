@@ -31,7 +31,7 @@
 - [集成第三方组件库说明](component.md)
 - [关于http请求跨域](cross-domain.md)
 - [集成第三方js插件](js-plug.md)
-- [浏览器兼容，polyfills说明](polysills.md)
+- [浏览器兼容，polyfills说明](polyfills.md)
 - [把CSS预编译器改成SASS](scss.md)
 - [http，ajax请求封装说明](http.md)
 - [集成视频播放器](video.md)

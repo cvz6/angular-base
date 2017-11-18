@@ -1,40 +1,40 @@
+Want to see English version of this post? [Click here](./README_EN.md).
+
 # 项目简介
-angular-base是一个以angular5.0为基础的，帮助企业
-快速开发的种子项目。
+angular-base是一个以angular5.0为基础的，帮助企业快速开发的种子项目。
 > 该项目是帮助企业快速开发使用的种子项目，如果你是新手，上手该项目可能不是一个很好的选择。
 
 
 项目地址：
 
-开源中国： https://gitee.com/lovepeng/angluar-base
+- 开源中国： https://gitee.com/lovepeng/angluar-base
 
-github：  https://github.com/liepeng328/angular-base
+- github：  https://github.com/liepeng328/angular-base
 
 # 设计思想
 **君子性非异也，善假于物也。**
 
-小公司开发或者个人开发项目，最好是找现成的轮子，改造一下为自己所用。
-节省的不是时间，是人民币。
+小公司开发或者个人开发项目，最好是找现成的轮子，改造一下为自己所用。节省的不是时间，是人民币。
 
 # 前端设计规范
 
 ### 微小·确定·幸福
 
 基于阿里的ANT DESIGN [详情看这里](https://ant.design/docs/spec/introduce-cn)
-- 导航 https://ant.design/docs/pattern/navigation-cn
+- 导航 [https://ant.design/docs/pattern/navigation-cn](https://ant.design/docs/pattern/navigation-cn)
 
-- 表单 https://ant.design/docs/pattern/form-cn
+- 表单 [https://ant.design/docs/pattern/form-cn](https://ant.design/docs/pattern/form-cn)
 
-- 列表https://ant.design/docs/pattern/list-cn
+- 列表 [https://ant.design/docs/pattern/list-cn](https://ant.design/docs/pattern/list-cn)
 
-- 表格https://ant.design/docs/pattern/table-cn
+- 表格 [https://ant.design/docs/pattern/table-cn](https://ant.design/docs/pattern/table-cn)
 
-- 表格：复杂数据https://ant.design/docs/pattern/complex-table-cn
+- 表格：复杂数据 [https://ant.design/docs/pattern/complex-table-cn](https://ant.design/docs/pattern/complex-table-cn)
 
-- 高级搜索https://ant.design/docs/pattern/advanced-search-cn
+- 高级搜索 [https://ant.design/docs/pattern/advanced-search-cn](https://ant.design/docs/pattern/advanced-search-cn)
  
- 下载设计组件库 http://library.ant.design/
- 资源下载 https://ant.design/docs/resource/download-cn
+ 下载设计组件库 [http://library.ant.design/](http://library.ant.design/)
+ 资源下载 [https://ant.design/docs/resource/download-cn](https://ant.design/docs/resource/download-cn)
 
 
 
@@ -63,8 +63,7 @@ github：  https://github.com/liepeng328/angular-base
 
 # 快速启动
 - 使用前准备工作
-使用前，安装angular-cli `npm install -g @angular/cli@latest`
-[参考链接](https://github.com/angular/angular-cli)
+使用前，安装angular-cli `npm install -g @angular/cli@latest` [参考链接](https://github.com/angular/angular-cli)
 > 如果网络受限，请尝试[淘宝的镜像](https://github.com/cnpm/cnpm)
 > `npm i -g cnpm --registry=https://registry.npm.taobao.org`
 
@@ -94,13 +93,13 @@ $ ng build --prod
 # 浏览器兼容性
 现代浏览器和 IE9 以上（需要 polyfills）
 
-[关于polyfills（填充）请看这里](src/assets/doc/polysills.md)
+[关于polyfills（填充）请看这里](src/assets/doc/polyfills.md)
 
 # 查看更多
 
 [查看更多请看这里，文档查看也看这里](src/assets/doc/index.md)
 
-本项目的所以代码都带文档，文档地址src/assets/doc/文件夹下
+本项目的所有代码都带文档，文档地址src/assets/doc/文件夹下
 
 [加入QQ群一起讨论](https://jq.qq.com/?_wv=1027&k=50KMIsW)
 

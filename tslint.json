@@ -6,8 +6,8 @@
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
-    "comment-format": [
-      true,
+    "comment-format": [ //注释行中的空格
+      false,
       "check-space"
     ],
     "curly": true,
@@ -67,23 +67,22 @@
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false, //尾部空格检测，可以有空格
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
     "no-use-before-declare": true,
-    "no-var-keyword": true,
+    "no-var-keyword": true,//禁用关键字var
     "object-literal-sort-keys": false,
-    "one-line": [
-      true,
+    "one-line": [ // 要求函数名，参数表和函数段开头的大括号之间要有空格。当然也可以设置为false，将这个功能完全禁用。
+      false,
       "check-open-brace",
       "check-catch",
       "check-else",
       "check-whitespace"
     ],
     "prefer-const": true,
-    "quotemark": [
-      true,
-      "single"
+    "quotemark": [ //引用标记：使用单引号还是双引号检查，这里false
+      false
     ],
     "radix": true,
     "semicolon": [
@@ -107,8 +106,8 @@
     "typeof-compare": true,
     "unified-signatures": true,
     "variable-name": false,
-    "whitespace": [
-      true,
+    "whitespace": [ // 在哪些情况下必须先插入空格
+      false,
       "check-branch",
       "check-decl",
       "check-operator",

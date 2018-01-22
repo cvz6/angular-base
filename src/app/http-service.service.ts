@@ -1,16 +1,17 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/retry';
-import {HttpServiceInterface} from './http-service-interface';
 import {ROOT_URL} from './config';
+import {Observable} from 'rxjs/Observable';
 
 /**
- * @description 定义全局接口，封装http服务，封装agnualr原生HttpClient类
+ * @description 定义全局接口，封装http服务<br>
+ *     封装angular原生HttpClient类
  * @date 2017-9-15
  * @author admin
  */
 @Injectable()
-export class HttpService implements HttpServiceInterface {
+export class HttpService {
 
   private rootUrl: string = ROOT_URL;
 
@@ -18,7 +19,15 @@ export class HttpService implements HttpServiceInterface {
   constructor(private httpClient: HttpClient) {
   }
 
-  upload(url: string, $event, data: (data: any) => void, error: (error: any) => void, fileKey: string, ...obj: any[]): void {
+  /**
+   * 文件上传
+   * @param {string} url
+   * @param $event
+   * @param {string} fileKey
+   * @param obj
+   * @return {Observable<Object>}
+   */
+  upload(url: string, $event, fileKey: string, ...obj: any[]): Observable<Object> {
     const files = $event.target.files || $event.srcElement.files;
     const formData = new FormData();
     for (let i = 0; i < files.length; i++) {
@@ -34,56 +43,45 @@ export class HttpService implements HttpServiceInterface {
     }
     // console.log("files", files)
     // console.log("formData", formData)
-    this.httpClient.post(this.rootUrl + url, formData).subscribe(data, error);
+    return this.httpClient.post(this.rootUrl + url, formData);
   }
 
   /**
-   * @description post请求,失败后自动重新请求，默认重试3次
+   * get请求
    * @param {string} url
-   * @param {any} body
-   * @param {(data: any) => void} data
-   * @param {(error: any) => void} error
-   * @param {number} retry
+   * @return {Observable<Object>}
    */
-  postRetry(url: string, body: any | any, data: (data: any) => void, error: (error: any) => void, retry: number): void {
-    this.httpClient.post(this.rootUrl + url, body).retry(retry).subscribe(data, error);
-
+  public get(url: string): Observable<Object> {
+    return this.httpClient.get(this.rootUrl + url);
   }
 
   /**
-   * @description post请求
+   * post请求
    * @param {string} url
-   * @param {any | any} body
-   * @param {(data: any) => void} data
-   * @param {(error: any) => void} error
+   * @param body
+   * @return {Observable<Object>}
    */
-  post(url?: string, body?: any | null, data?: (data: any) => void, error?: (error: any) => void): void {
-    this.httpClient.post(this.rootUrl + url, body).subscribe(data, error);
+  public post(url: string, body: any | null): Observable<Object> {
+    return this.httpClient.post(this.rootUrl + url, body);
   }
 
   /**
-   * @description get请求
+   * put请求
    * @param {string} url
-   * @param {(data: any) => void} data
-   * @param {(error: any) => void} error
-   * @return void
+   * @param body
+   * @return {Observable<Object>}
    */
-  public get(url: string, data: (data: any) => void, error: (error: any) => void): void {
-    this.httpClient.get(this.rootUrl + url).subscribe(data, error);
+  public put(url: string, body: any | null): Observable<Object> {
+    return this.httpClient.put(this.rootUrl + url, body);
   }
 
   /**
-   * @description get请求,失败后自动重新请求，默认重试3次
+   * delete请求
    * @param {string} url
-   * @param {(data: any) => void} data
-   * @param {(error: any) => void} error
-   * @param {number} retry
+   * @return {Observable<Object>}
    */
-  getRetry(url: string, data: (data: any) => void, error: (error: any) => void, retry: number): void {
-    if (!retry) {
-      retry = 3; // 默认值为3
-    }
-    this.httpClient.get(this.rootUrl + url).retry(retry).subscribe(data, error);
+  public delete(url: string): Observable<Object> {
+    return this.httpClient.delete(this.rootUrl + url);
   }
 
 }

@@ -98,7 +98,7 @@ $ ng build --prod
 ```
 
 # 浏览器兼容性
-现代浏览器和 IE9 以上（需要 polyfills）
+现代浏览器和 IE10 以上（需要 polyfills）
 
 [关于polyfills（填充）请看这里](src/assets/doc/polyfills.md)
 

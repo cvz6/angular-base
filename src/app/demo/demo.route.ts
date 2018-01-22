@@ -1,5 +1,4 @@
 import {IndexComponent} from './index/index.component';
-import {HttpDemoComponent} from './http-demo/http-demo.component';
 import {VideoComponent} from './video/video.component';
 import {JquaryComponent} from './jquary/jquary.component';
 import {Routes} from '@angular/router';
@@ -18,10 +17,6 @@ export const demoRoutes: Routes = [
   {
     path: 'jquary',
     component: JquaryComponent
-  },
-  {
-    path: 'httpDemo',
-    component: HttpDemoComponent
   },
   {
     path: 'asy-load-js',

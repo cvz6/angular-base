@@ -5,7 +5,6 @@ import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {RouterModule} from '@angular/router';
 import {demoRoutes} from './demo.route';
 import {VideoComponent} from './video/video.component';
-import {HttpDemoComponent} from './http-demo/http-demo.component';
 import {JquaryComponent} from './jquary/jquary.component';
 import { BaiduMapComponent } from './baidu-map/baidu-map.component';
 import { AsyLoadJsComponent } from './asy-load-js/asy-load-js.component';
@@ -20,7 +19,6 @@ import { AsyLoadJsComponent } from './asy-load-js/asy-load-js.component';
   declarations: [
     IndexComponent,
     JquaryComponent,
-    HttpDemoComponent,
     VideoComponent,
     BaiduMapComponent,
     AsyLoadJsComponent,

@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {appApis} from '../../apis';
-import {ROOT_URL} from '../../config';
-import {AppSettings} from '../../app-settings';
 
 @Component({
   selector: 'app-jquary',
